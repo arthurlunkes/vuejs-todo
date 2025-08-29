@@ -1,8 +1,8 @@
 {
-  "name": "backend",
+  "name": "todo-backend",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "To Do Backend with NestJS and GraphQL.",
+  "author": "Arthur Lunkes",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
@@ -21,11 +21,11 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@apollo/server": "^5.0.0",
     "@nestjs/common": "^11.0.1",
     "@nestjs/core": "^11.0.1",
     "@nestjs/platform-express": "^11.0.1",
     "@nestjs/typeorm": "^11.0.0",
-    "apollo-server-core": "^3.13.0",
     "pg": "^8.16.3",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1"
@@ -40,9 +40,8 @@
     "@nestjs/testing": "^11.0.1",
     "@types/express": "^5.0.0",
     "@types/jest": "^30.0.0",
-    "@types/node": "^22.10.7",
+    "@types/node": "^24.3.0",
     "@types/supertest": "^6.0.2",
-    "apollo-server-express": "^3.13.0",
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
