@@ -34,8 +34,7 @@ export class User {
 
   @Column({
     type: 'timestamp',
-    default: () => 'CURRENT_TIMESTAMP',
-    nullable: false,
+    nullable: true,
   })
   deletedAt: Date;
 }
