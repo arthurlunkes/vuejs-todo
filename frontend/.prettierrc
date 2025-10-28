@@ -7,7 +7,7 @@
   "singleQuote": true,
   "arrowParens": "always",
   "bracketSpacing": true,
-  "singleAttributePerLine": false,
+  "singleAttributePerLine": true,
   "vueIndentScriptAndStyle": true,
   "trailingComma": "none",
   "endOfLine": "lf"

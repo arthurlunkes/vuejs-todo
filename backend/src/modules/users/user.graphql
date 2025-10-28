@@ -1,0 +1,23 @@
+type User {
+  id: ID!
+  username: String!
+  password: String
+  active: Boolean
+  deleted: Boolean
+  createdAt: String
+  updatedAt: String
+  deletedAt: String
+}
+
+type Query {
+  users: [User]
+  user(id: ID!): User
+}
+
+type Mutation {
+  createUser(username: String!, password: String!): User
+  deleteUser(id: ID!): Boolean
+  deactivateUser(id: ID!): Boolean
+  reactivateUser(id: ID!): Boolean
+  updateUser(id: ID!, username: String!, password: String!): User
+}
