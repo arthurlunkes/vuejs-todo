@@ -10,5 +10,6 @@
   "singleAttributePerLine": true,
   "vueIndentScriptAndStyle": true,
   "trailingComma": "none",
-  "endOfLine": "lf"
+  "endOfLine": "lf",
+  "plugins": ["prettier-plugin-tailwindcss"]
 }
