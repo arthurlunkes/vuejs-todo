@@ -9,5 +9,11 @@ export default defineConfig({
     port: 5173,
     host: 'localhost',
     open: true
+  },
+  resolve: {
+    alias: {
+      '@components': '/src/components',
+      '@pages': '/src/pages'
+    }
   }
 });
