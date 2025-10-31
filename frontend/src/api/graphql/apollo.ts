@@ -1,22 +1,14 @@
-import {
-  ApolloClient,
-  InMemoryCache,
-  createHttpLink
-} from '@apollo/client/core';
-import { DefaultApolloClient } from '@vue/apollo-composable';
-import { provide } from 'vue';
+import ApolloClient, { InMemoryCache } from 'apollo-boost';
+import VueApollo from 'vue-apollo';
 
-const httpLink = createHttpLink({
-  uri: 'http://localhost:4000/graphql'
-});
+const cache = new InMemoryCache();
 
+// apollo com cache
 const apolloClient = new ApolloClient({
-  link: httpLink,
-  cache: new InMemoryCache()
+  uri: 'http://localhost:3000/graphql',
+  cache
 });
 
-export function provideApollo(app) {
-  app.provide(DefaultApolloClient, apolloClient);
-}
-
-export default apolloClient;
+export const apolloProvider = new VueApollo({
+  defaultClient: apolloClient
+});
